@@ -11,3 +11,10 @@
     font-weight:400;
 
 }
+.main-button{
+    background-color:gold;
+    width:150px;
+    height:30px;
+    font-weight:bold;
+    border-radius:5px;
+}
