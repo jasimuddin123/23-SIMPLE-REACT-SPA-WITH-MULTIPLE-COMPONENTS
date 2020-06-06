@@ -18,7 +18,7 @@ const Shop = () => {
                 <h3>Product:{products.length}</h3>
            
                     {
-                        products.map(pd => <Product product={pd}></Product>)
+                        products.map(pd =><Product product={pd}></Product>)
                     }
                 
 
