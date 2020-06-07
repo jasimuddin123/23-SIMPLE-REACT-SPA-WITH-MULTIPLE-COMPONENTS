@@ -10,6 +10,12 @@ const Shop = () => {
 
     const [products, setproduct] = useState(first10);
 
+    const handleAddProduct = (product) => {
+
+            console.log("Product Added",product);
+
+    }
+
 
 
     return (
@@ -18,7 +24,11 @@ const Shop = () => {
                 <h3>Product:{products.length}</h3>
            
                     {
-                        products.map(pd =><Product product={pd}></Product>)
+                        products.map(pd =><Product 
+                            handleAddProduct={handleAddProduct}
+                            product={pd}>
+
+                            </Product>)
                     }
                 
 
