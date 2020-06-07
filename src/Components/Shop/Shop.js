@@ -8,13 +8,20 @@ const Shop = () => {
 
     const first10 = fakeData.slice(0, 10);
 
-    const [products, setproduct] = useState(first10);
+    const [products, setProduct] = useState(first10);
 
-    const handleAddProduct = (product) => {
+    const [cart, setCart] = useState([]);
 
-            console.log("Product Added",product);
+    const handleAddProduct = (product) =>{
+
+        console.log("Product Added",product);
+
+            const newCart = [...cart,product];
+
+            setCart(newCart);
 
     }
+
 
 
 
@@ -25,9 +32,9 @@ const Shop = () => {
            
                     {
                         products.map(pd =><Product 
-                            handleAddProduct={handleAddProduct}
+                            handleAddProduct ={handleAddProduct}
                             product={pd}>
-
+                        
                             </Product>)
                     }
                 
@@ -37,6 +44,7 @@ const Shop = () => {
 
             <div className="cart-container">
                     <h3>This is Cart</h3>
+                <h5>Order Summary :{cart.length}</h5>
             </div>
 
         </div>
